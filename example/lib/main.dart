@@ -3,10 +3,12 @@ import 'countries.dart';
 import 'package:circle_flags/circle_flags.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('flags'),
+          title: const Text('flags'),
         ),
         body: Container(
           // child: CircleFlag(
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
                     leading: CircleFlag(
                       country.countryCode,
                       size: 32,
+                      isSquare: true,
+                      borderRadius: 3,
                     ),
                     title: Text(country.name),
                   ),
