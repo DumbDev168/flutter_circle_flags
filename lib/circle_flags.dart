@@ -29,12 +29,17 @@ class CircleFlag extends StatelessWidget {
       width: size,
       height: size,
       package: 'circle_flags',
+      fit: BoxFit.fill,
     );
 
     if (isSquare) {
       return ClipRRect(
         borderRadius: BorderRadius.circular(borderRadius),
-        child: svg,
+        child: SizedBox(
+          width: size * 140 / 100,
+          height: size,
+          child: svg,
+        ),
       );
     }
 

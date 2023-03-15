@@ -35,9 +35,9 @@ class MyApp extends StatelessWidget {
                   child: ListTile(
                     leading: CircleFlag(
                       country.countryCode,
-                      size: 32,
+                      size: 40,
                       isSquare: true,
-                      borderRadius: 3,
+                      borderRadius: 5,
                     ),
                     title: Text(country.name),
                   ),
